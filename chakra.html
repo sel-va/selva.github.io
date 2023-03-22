@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chakra</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	
+<!-- Pg Icon -->
+	<link href="images/info.png" rel="shortcut icon">
+  </head>
+  
+  <body oncontextmenu="return false" onload="checkForUpdate()">
+ 
+  <div id="page1"  style="display:block;" >
+    <div class="login-page">
+      <div class="form">
+        <h2>Login</h2>
+        <form onsubmit="return validatePassword();" id="password-form" class=" login-form">
+       
+          <input type="password" placeholder="Password" id="password-input">
+          <input class="btns" type="submit" value="Submit">
+        </form>
+        <p id="password-error" class="message" style="display:none; font-family: Nunito;">Incorrect password. Please try again .</p>
+
+      </div>
+    </div>
+  </div>
+
+  	<script>
+		function validatePassword() {
+			var password = document.getElementById("password-input").value;
+			if (password == "67890") {
+				document.getElementById("password-error").style.display = "none";
+				document.getElementById("page1").style.display = "none";
+				document.getElementById("page2").style.display = "block";
+				return false;
+			} else {
+				document.getElementById("password-error").style.display = "block";
+				return false;
+			}
+		}
+		
+		/* Disable ctrl, u, F12 keys */
+
+    function mousehandler(e) {
+        var myevent = (isNS) ? e : event;
+        var eventbutton = (isNS) ? myevent.which : myevent.button;
+        if ((eventbutton == 2) || (eventbutton == 3)) return false;
+    }
+    document.oncontextmenu = mischandler;
+    document.onmousedown = mousehandler;
+    document.onmouseup = mousehandler;
+    function disableCtrlKeyCombination(e) {
+        var forbiddenKeys = new Array("a", "s", "c", "x","u");
+        var key;
+        var isCtrl;
+        if (window.event) {
+            key = window.event.keyCode;
+            //IE
+            if (window.event.ctrlKey)
+                isCtrl = true;
+            else
+                isCtrl = false;
+        }
+        else {
+            key = e.which;
+            //firefox
+            if (e.ctrlKey)
+                isCtrl = true;
+            else
+                isCtrl = false;
+        }
+        if (isCtrl) {
+            for (i = 0; i < forbiddenKeys.length; i++) {
+                //case-insensitive comparation
+                if (forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase()) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+	
+	</script>
+<!--------------------------------------------------------------------------------------------------->
+
+<div id="page2" style="display:none; ">
+
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+	<meta charset="utf-8">
+    <meta name="author" content="Selva">
+   
+	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+	
+<body style="font-size:calc(9px + 0.4vw);font-family: Nunito;"> 
+<!--------------------------------------------------------------------------------------------------->
+
+   <style>
+      /* Hide all text by default */
+      .hidden-text {
+        display: none;
+      }
+      /* Style the boxes */
+      .box {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        border: 1px solid black;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+      }
+    </style>
+
+
+<h1 style="text-align:center">ஆருடசக்கர பலன்</h1>
+<p style="text-align:center">Click Any One Box</p>
+<hr>
+    <button id="shuffle-btn">Shuffle</button>
+    <div id="hidden-text-container">
+      <!-- Replace the text content of each div with your own hidden text -->
+      <div class="box"><span class="hidden-text">1.அனுகூலம்(சேதம்)</span></div>
+<div class="box"><span class="hidden-text">2.சுகமுண்டு, பொருட்</span></div>
+<div class="box"><span class="hidden-text">3.நாளுக்குநாள் நன் மை,லாபமுண்டு.</span></div>
+<div class="box"><span class="hidden-text">4.பத்துநாட்களுட் கலகம்,சுகவீனம்.</span></div>
+<div class="box"><span class="hidden-text">5. கைகூடும் செய்தொழில் விருத்தியாகும். </span></div>
+<div class="box"><span class="hidden-text">6.அதிஸ்டமுண்டுபிணி தீரும், பொருள்கிடைக்கும். தாமதம்.</span></div>
+<div class="box"><span class="hidden-text">7.போனதுகிடைக்கும், கவலையில்லை.</span></div>
+<div class="box"><span class="hidden-text">8.தீயகிரகத்தால்தீமை</span></div>
+<div class="box"><span class="hidden-text">9.உத்தியோகம்வரும் உபகாரம்கிடைக்கும் </span></div>
+<div class="box"><span class="hidden-text">10. பலநஷ்டம்,பிரயாண ங்கூடிடாது.</span></div>
+<div class="box"><span class="hidden-text">11.நினைத்தகாரியம் கைகூடும், சுணங்கும்.</span></div>
+<div class="box"><span class="hidden-text">12.கைவிட்டுப்போனது கிடைக்கும்.</span></div>
+<div class="box"><span class="hidden-text">13.இப்போதுதொடங்கியது னாற் சத்துருபயம்.</span></div>
+<div class="box"><span class="hidden-text">14. குருவால் நன்மை உண்டு </span></div>
+<div class="box"><span class="hidden-text">15.சுபகாரியம் ஜயம், வியாபாரம் விருத்தியா கும்.</span></div>
+<div class="box"><span class="hidden-text">16. சரீரபீடை,பகை, கெடுதி உண்டாகும்.</span></div>
+<div class="box"><span class="hidden-text">17. சினேகிதரால் உதவி, போனதுவரும்.</span></div>
+<div class="box"><span class="hidden-text">18. கிடையாது, உன்னை பிரிந்துபோயிருக்கின்றது. </span></div>
+<div class="box"><span class="hidden-text">19நினைத்தகாரியம்ஜயம், புத்திரபாக்கியம்கிடைக்கும்.</span></div>
+<div class="box"><span class="hidden-text">20.பிரயாணம் நன்று, பூமிப்பேறு.</span></div>
+<div class="box"><span class="hidden-text">21. ஒருவரிடம் சிக்கிக் கொண்டது.</span></div>
+<div class="box"><span class="hidden-text">22. சகோதரஒற்றுமை,உரிமைசேரும்.</span></div>
+<div class="box"><span class="hidden-text">23.எடுத்தகாரியம் அலைச்சல். </span></div>
+<div class="box"><span class="hidden-text">24. திரவிய சேதம் வியாதிவழக்குண்டு</span></div>
+<div class="box"><span class="hidden-text">25. எண்ணியது முடியும். </span></div>
+<div class="box"><span class="hidden-text">26. எடுத்தகாரியம்தாமதம் வழக்குவெல்லும்.</span></div>
+<div class="box"><span class="hidden-text"> 27.தெய்வசகாயமுண்டு காரியம் ஐயம்.</span></div>
+<div class="box"><span class="hidden-text"> 28.துரதேசம் போகலாம் நன்மையுண்டு.</span></div>
+<div class="box"><span class="hidden-text">29.கலகம்,தனச்சேதம். </span></div>
+<div class="box"><span class="hidden-text">30.தொழில் கெடும், நினைத்தது முடியும்.</span></div>
+<div class="box"><span class="hidden-text">31.விருத்தியுண்டுநினைத்த காரியம் முடியும்.</span></div>
+<div class="box"><span class="hidden-text">32. கலகம், உறவினர் பகையாவர்.</span></div>
+<div class="box"><span class="hidden-text">33. ஒரு விசயத்தில் அகப்பட்டாய் ஜயம்.</span></div>
+<div class="box"><span class="hidden-text">34.உனது எண்ணப்படி அனுகூலம்.</span></div>
+<div class="box"><span class="hidden-text">35.துன்பம்நீங்கும் ஸ்திரியின் னால் துக்கம்.</span></div>
+<div class="box"><span class="hidden-text">36. மனையிற் கலகம் வேறிடம்போவாய்.</span></div>
+<div class="box"><span class="hidden-text">37. ஒருவிசயத்தில் துன்பப்படுகிறாய் துயர் நீங்கும்.</span></div>
+<div class="box"><span class="hidden-text">38.சீவன விஷயத்தால் துக்கம் ஐயம். </span></div>
+<div class="box"><span class="hidden-text">39.நம்பியிருஜயம் வரும்.</span></div>
+<div class="box"><span class="hidden-text"> 40. மனத்துக்கம்சத்துருவாற்கெடுதி.</span></div>
+<div class="box"><span class="hidden-text">41.புத்திரோற்பக்தி தெழில் பலிக்கும்.</span></div>
+<div class="box"><span class="hidden-text">42.சினேகிதம் வரும் காரியம்சித்தியாகும். </span></div>
+<div class="box"><span class="hidden-text">43.திருடர் பயம்,பிணி நஷ்டம்.</span></div>
+<div class="box"><span class="hidden-text">44.லாபம் </span></div>
+<div class="box"><span class="hidden-text">45.செய்யலாம், பொருட்செலவு</span></div>
+<div class="box"><span class="hidden-text">46 சிநேகிதரால் கெடுதி உண்டாகும்</span></div>
+<div class="box"><span class="hidden-text">47. நாட்சென்றால் பலிக்கும் </span></div>
+<div class="box"><span class="hidden-text">48.ஒருவர் சொல்லை நம்பவேண்டும். </span></div>
+<div class="box"><span class="hidden-text">9.உத்தேசித்தது தாமதம்.</span></div>
+<div class="box"><span class="hidden-text">50..நாட்சென்றாற் சுகம். </span></div>
+<div class="box"><span class="hidden-text">51..கலகத்தால்பயமில்லை </span></div>
+<div class="box"><span class="hidden-text">52..பிறதேசத்தால்வர சுணங்கும்.</span></div>
+<div class="box"><span class="hidden-text">53..எண்ணியகாரியம் முடியாது. </span></div>
+<div class="box"><span class="hidden-text">54. துன்பம்நீங்க சினேகிதம் மற</span></div>
+<div class="box"><span class="hidden-text">55.போகிற காரியங்கைகூடும்.</span></div>
+<div class="box"><span class="hidden-text">56.வீண் அலைச்சல். </span></div>
+<div class="box"><span class="hidden-text">57.கிடைக்கும், போகிற காரியம் முடியும். </span></div>
+<div class="box"><span class="hidden-text">58.துயர் அதிகம் தீரும்.</span></div>
+<div class="box"><span class="hidden-text">59.காரியம்ஜயம்பகை தீரும்.</span></div>
+<div class="box"><span class="hidden-text">50.எடுத்தகாரியம் முடியும் தாமதம்.</span></div>
+<div class="box"><span class="hidden-text">61.. கைகூடும்,யாத்திரை போக நன்று.</span></div>
+<div class="box"><span class="hidden-text">62.செற்ப பொருள் நஷ்டம்.</span></div>
+<div class="box"><span class="hidden-text">63.. இராஜபயம் துயரம்.</span></div>
+<div class="box"><span class="hidden-text">64. தனங்கிடைக்கும். </span></div>
+<div class="box"><span class="hidden-text">65.மனவருத்தம் உண்டு சுகம்வரும்.</span></div>
+<div class="box"><span class="hidden-text">66. உன்எண்ணம் நிறைவேறாது. தீமையாய் வரும்.</span></div>
+<div class="box"><span class="hidden-text">67. நீ துயரப்படுகிறாய் சுகம்வரும்.</span></div>
+<div class="box"><span class="hidden-text">68. காரியங்கைகூடும் பொருள்கிடைக்கும். </span></div>
+<div class="box"><span class="hidden-text">69. வெளியே சென்றது கிடைக்கும்.</span></div>
+<div class="box"><span class="hidden-text">70. மருந்துசாப்பிட சுகம்.</span></div>
+<div class="box"><span class="hidden-text">71. சினேகிதம் நீங்கிற் சுகம்வரும</span></div>
+<div class="box"><span class="hidden-text">72..பூமிகொள்ளலாம்.</span></div>
+<div class="box"><span class="hidden-text">73.கஷ்டம்,தனவிரயம் பந்துவிரோதம்.</span></div>
+<div class="box"><span class="hidden-text">74. சிறிது பொருட்ச்செலவு.</span></div>
+<div class="box"><span class="hidden-text">75. வழக்கால் வெற்றி.</span></div>
+<div class="box"><span class="hidden-text">76.துணைவன்பேச்சை தடுக்காதே.</span></div>
+<div class="box"><span class="hidden-text">77. பங்காளனை நீக்கி விடு சுகம்வரும்.</span></div>
+<div class="box"><span class="hidden-text">78. கலகம் சுபகாலம்.</span></div>
+<div class="box"><span class="hidden-text">79. சாந்திசெய்யத் தீரும்</span></div>
+<div class="box"><span class="hidden-text">80. எண்ணங்கூடிவராது. </span></div>
+<div class="box"><span class="hidden-text">81.. நினைத்தகாரியம் சித்தி.</span></div>
+<div class="box"><span class="hidden-text">82. மனச்சஞ்சலம்.</span></div>
+<div class="box"><span class="hidden-text">83. பயிர்த்தொழில் விருத்தி.</span></div>
+<div class="box"><span class="hidden-text">84.கைகூடும். </span></div>
+<div class="box"><span class="hidden-text">85. உன்னாற்கேடு.</span></div>
+<div class="box"><span class="hidden-text">86. பொருள் வரும் காரியங்கைகூடும்.</span></div>
+<div class="box"><span class="hidden-text">87. செளக்கியம் உண்டு. கவலை தீரும்.</span></div>
+<div class="box"><span class="hidden-text">88. கிரகங்கள் கெட்ட தாகவிருக்கின்றன</span></div>
+<div class="box"><span class="hidden-text">89. பலநஷ்டம்.</span></div>
+<div class="box"><span class="hidden-text">90. கீர்த்தி உண்டாகும்</span></div>
+<div class="box"><span class="hidden-text">91. வழக்கு வெல்லும் பிணிதீரும்.</span></div>
+<div class="box"><span class="hidden-text">92. எண்ணியகாரியம் கூடும்.நாட்செல்லும்</span></div>
+<div class="box"><span class="hidden-text">93. அந்நியமனுஷனால் உதவி.</span></div>
+<div class="box"><span class="hidden-text">94. நினைத்த காரியம் முடியாது.</span></div>
+<div class="box"><span class="hidden-text">95.நினைத்த காரியம் முடியும். பிணிதீரும்</span></div>
+<div class="box"><span class="hidden-text">96.செய்காரியம் பலிதம் </span></div>
+<div class="box"><span class="hidden-text">97.மனத்துக்கம். </span></div>
+<div class="box"><span class="hidden-text">98.சென்றவர் வருவார் கைகூடும்.</span></div>
+<div class="box"><span class="hidden-text">99.கலகம் வந்து தீரும். </span></div>
+<div class="box"><span class="hidden-text">100நினைத்த வேலை கைகூடும்.</span></div>
+<div class="box"><span class="hidden-text">101. நம்பவேண்டாம்.</span></div>
+<div class="box"><span class="hidden-text">102. மனக்கவலைதீரும். </span></div>
+<div class="box"><span class="hidden-text">103. பயமில்லை.</span></div>
+<div class="box"><span class="hidden-text">104. போனது வராது.</span></div>
+<div class="box"><span class="hidden-text">105. கிரகத்தால் துன்பம்.</span></div>
+<div class="box"><span class="hidden-text">106. விருத்தியாகும். </span></div>
+<div class="box"><span class="hidden-text">107. இஷ்டர் பகையாவர்.</span></div>
+<div class="box"><span class="hidden-text">108.பொருள்சேரும்.நினைத்த வேலை முடியும்.</span></div>
+    </div>
+    <script>
+      var boxes = document.querySelectorAll('.box');
+      var hiddenTexts = document.querySelectorAll('.hidden-text');
+
+      // Shuffle the boxes
+      function shuffleBoxes() {
+        var parent = boxes[0].parentNode;
+        for (var i = boxes.length - 1; i > 0; i--) {
+          var j = Math.floor(Math.random() * (i + 1));
+          parent.insertBefore(boxes[j], boxes[i]);
+        }
+      }
+
+      // Hide all hidden text
+      function hideAllHiddenText() {
+        for (var i = 0; i < hiddenTexts.length; i++) {
+          hiddenTexts[i].style.display = 'none';
+        }
+      }
+
+      // Show the selected hidden text
+      function showSelectedHiddenText(event) {
+        var box = event.target.closest('.box');
+        var hiddenText = box.querySelector('.hidden-text');
+        hideAllHiddenText();
+        hiddenText.style.display = 'inline';
+      }
+
+      // Attach click event listener to all boxes
+      for (var i = 0; i < boxes.length; i++) {
+        boxes[i].addEventListener('click', showSelectedHiddenText);
+      }
+
+      // Attach click event listener to the Shuffle button
+      var shuffleBtn = document.querySelector('#shuffle-btn');
+      shuffleBtn.addEventListener('click', function() {
+        shuffleBoxes();
+        hideAllHiddenText();
+      });
+
+      // Shuffle the boxes initially
+      shuffleBoxes();
+    </script>
+
+<hr>
+
+<!--------------------------------------------------------------------------------------------------->
+
+<style type="text/css">
+	.bborder{font-family: arial;border-bottom: solid grey;border-bottom-width: 0.5px;}
+	h2 {font-size:calc(9px + 0.5vw);}
+
+	table {
+			border-collapse: collapse;
+		}
+		td {
+			width: 40px;
+			height: 40px;
+			border: 1px solid black;
+			text-align: center;
+			font-weight: bold;
+			font-size: 20px;
+			background-color: white;
+			position: relative;
+		}
+		td:hover {
+			cursor: pointer;
+		}
+		.popup {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0, 0, 0, 0.5);
+			display: none;
+			justify-content: center;
+			align-items: center;
+		}
+		.popup-text {
+			background-color: white;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+			font-size: 24px;
+		}
+      #result {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px;
+        background-color: #25ad09;
+        color: #fff;
+        text-align: center;
+      }
+    </style>
+
+
+<h1 style="text-align:center">ஆருடசக்கர பலன்</h1>
+<hr>
+<p style="text-align:center">இந்தச்சக்கரத்திலிருக்கிற இலக்கங்களில் ஒன்றைச்சிறுபிள்ளையின் கையினால் தொடச்சொல்வி அந்த இலக்கத்தின் பலாபலன்களை அறிந்துகொள்க.<br>
+	அல்லது<br>
+108-ல் குறைய ஓர் இலக்கங் கேட்டு, அந்த இலக்கத்தின் பலா பலன்களையும் பார்த்துக் கொள்ள லாம்.</p>
+<hr>
+    <table style="align:center">
+      <tr>
+     <td data-text=""></td>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text="1.அனுகூலம்(சேதம்)">1</td>
+<td data-text="2.சுகமுண்டு, பொருட்">2</td>
+<td data-text="3.நாளுக்குநாள் நன்மை,லாபமுண்டு.">3</td>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text=""></td>
+      </tr>
+      <tr>
+        <td data-text=""></td>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text="8.தீயகிரகத்தால்தீமை">8</td>
+<td data-text="7.போனதுகிடைக்கும், கவலையில்லை.">7</td>
+<td data-text="6.அதிஸ்டமுண்டுபிணி தீரும், பொருள்கிடைக்கும். தாமதம்.">6</td>
+<td data-text="5. கைகூடும் செய்தொழில் விருத்தியாகும். ">5</td>
+<td data-text="4.பத்துநாட்களுட் கலகம்,சுகவீனம்.">4</td>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text=""></td>
+      </tr>
+	  <tr>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text="9.உத்தியோகம்வரும் உபகாரம்கிடைக்கும் ">9</td>
+<td data-text="10. பலநஷ்டம்,பிரயாண ங்கூடிடாது.">10</td>
+<td data-text="11.நினைத்தகாரியம் கைகூடும், சுணங்கும்.">11</td>
+<td data-text="12.கைவிட்டுப்போனது கிடைக்கும்.">12</td>
+<td data-text="13.இப்போதுதொடங்கியது னாற் சத்துருபயம்.">13</td>
+<td data-text="14. குருவால் நன்மை உண்டு ">14</td>
+<td data-text="15.சுபகாரியம் ஜயம், வியாபாரம் விருத்தியா கும்.">15</td>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text=""></td>
+      </tr>
+	  <tr>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text="24. திரவிய சேதம் வியாதிவழக்குண்டு">24</td>
+<td data-text="23.எடுத்தகாரியம் அலைச்சல். ">23</td>
+<td data-text="22. சகோதரஒற்றுமை,உரிமைசேரும்.">22</td>
+<td data-text="21. ஒருவரிடம் சிக்கிக் கொண்டது.">21</td>
+<td data-text="20.பிரயாணம் நன்று, பூமிப்பேறு.">20</td>
+<td data-text="19நினைத்தகாரியம்ஜயம், புத்திரபாக்கியம்கிடைக்கும்.">19</td>
+<td data-text="18. கிடையாது, உன்னை பிரிந்துபோயிருக்கின்றது. ">18</td>
+<td data-text="17. சினேகிதரால் உதவி, போனதுவரும்.">17</td>
+<td data-text="16. சரீரபீடை,பகை, கெடுதி உண்டாகும்.">16</td>
+<td data-text=""></td>
+<td data-text=""></td>	
+      </tr>
+	  <tr>
+<td data-text=""></td>
+<td data-text="25. எண்ணியது முடியும். ">25</td>
+<td data-text="26. எடுத்தகாரியம்தாமதம் வழக்குவெல்லும்.">26</td>
+<td data-text=" 27.தெய்வசகாயமுண்டு காரியம் ஐயம்.">27</td>
+<td data-text=" 28.துரதேசம் போகலாம் நன்மையுண்டு.">28</td>
+<td data-text="29.கலகம்,தனச்சேதம். ">29</td>
+<td data-text="30.தொழில் கெடும், நினைத்தது முடியும்.">30</td>
+<td data-text="31.விருத்தியுண்டுநினைத்த காரியம் முடியும்.">31</td>
+<td data-text="32. கலகம், உறவினர் பகையாவர்.">32</td>
+<td data-text="33. ஒரு விசயத்தில் அகப்பட்டாய் ஜயம்.">33</td>
+<td data-text="34.உனது எண்ணப்படி அனுகூலம்.">34</td>
+<td data-text="35.துன்பம்நீங்கும் ஸ்திரியின் னால் துக்கம்.">35</td>
+<td data-text=""></td>
+      </tr>	  
+	  <tr>
+<td data-text="48.ஒருவர் சொல்லை நம்பவேண்டும். ">48</td>
+<td data-text="47. நாட்சென்றால் பலிக்கும் ">47</td>
+<td data-text="46 சிநேகிதரால் கெடுதி உண்டாகும்">46</td>
+<td data-text="45.செய்யலாம், பொருட்செலவு">45</td>
+<td data-text="44.லாபம் ">44</td>
+<td data-text="43.திருடர் பயம்,பிணி நஷ்டம்.">43</td>
+<td data-text="42.சினேகிதம் வரும் காரியம்சித்தியாகும். ">42</td>
+<td data-text="41.புத்திரோற்பக்தி தெழில் பலிக்கும்.">41</td>
+<td data-text=" 40. மனத்துக்கம்சத்துருவாற்கெடுதி.">40</td>
+<td data-text="39.நம்பியிருஜயம் வரும்.">39</td>
+<td data-text="38.சீவன விஷயத்தால் துக்கம் ஐயம். ">38</td>
+<td data-text="37. ஒருவிசயத்தில் துன்பப்படுகிறாய் துயர் நீங்கும்.">37</td>
+<td data-text="36. மனையிற் கலகம் வேறிடம்போவாய்.">36</td>
+      </tr>	  
+	  <tr>
+<td data-text="9.உத்தேசித்தது தாமதம்.">49</td>
+<td data-text="50..நாட்சென்றாற் சுகம். ">50</td>
+<td data-text="51..கலகத்தால்பயமில்லை ">51</td>
+<td data-text="52..பிறதேசத்தால்வர சுணங்கும்.">52</td>
+<td data-text="53..எண்ணியகாரியம் முடியாது. ">53</td>
+<td data-text="54. துன்பம்நீங்க சினேகிதம் மற">54</td>
+<td data-text="55.போகிற காரியங்கைகூடும்.">55</td>
+<td data-text="56.வீண் அலைச்சல். ">56</td>
+<td data-text="57.கிடைக்கும், போகிற காரியம் முடியும். ">57</td>
+<td data-text="58.துயர் அதிகம் தீரும்.">58</td>
+<td data-text="59.காரியம்ஜயம்பகை தீரும்.">59</td>
+<td data-text="50.எடுத்தகாரியம் முடியும் தாமதம்.">60</td>
+<td data-text="61.. கைகூடும்,யாத்திரை போக நன்று.">61</td>
+      </tr>	  
+	  <tr>
+<td data-text="74. சிறிது பொருட்ச்செலவு.">74</td>
+<td data-text="73.கஷ்டம்,தனவிரயம் பந்துவிரோதம்.">73</td>
+<td data-text="72..பூமிகொள்ளலாம்.">72</td>
+<td data-text="71. சினேகிதம் நீங்கிற் சுகம்வரும">71</td>
+<td data-text="70. மருந்துசாப்பிட சுகம்.">70</td>
+<td data-text="69. வெளியே சென்றது கிடைக்கும்.">69</td>
+<td data-text="68. காரியங்கைகூடும் பொருள்கிடைக்கும். ">68</td>
+<td data-text="67. நீ துயரப்படுகிறாய் சுகம்வரும்.">67</td>
+<td data-text="66. உன்எண்ணம் நிறைவேறாது. தீமையாய் வரும்.">66</td>
+<td data-text="65.மனவருத்தம் உண்டு சுகம்வரும்.">65</td>
+<td data-text="64. தனங்கிடைக்கும். ">64</td>
+<td data-text="63.. இராஜபயம் துயரம்.">63</td>
+<td data-text="62.செற்ப பொருள் நஷ்டம்.">62</td>
+      </tr>	  
+	  <tr>
+<td data-text=""></td>
+<td data-text="75. வழக்கால் வெற்றி.">75</td>
+<td data-text="76.துணைவன்பேச்சை தடுக்காதே.">76</td>
+<td data-text="77. பங்காளனை நீக்கி விடு சுகம்வரும்.">77</td>
+<td data-text="78. கலகம் சுபகாலம்.">78</td>
+<td data-text="79. சாந்திசெய்யத் தீரும்">79</td>
+<td data-text="80. எண்ணங்கூடிவராது. ">80</td>
+<td data-text="81.. நினைத்தகாரியம் சித்தி.">81</td>
+<td data-text="82. மனச்சஞ்சலம்.">82</td>
+<td data-text="83. பயிர்த்தொழில் விருத்தி.">83</td>
+<td data-text="84.கைகூடும். ">84</td>
+<td data-text="85. உன்னாற்கேடு.">85</td>
+<td data-text=""></td>
+      </tr>	 
+	  <tr>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text="94. நினைத்த காரியம் முடியாது.">94</td>
+<td data-text="93. அந்நியமனுஷனால் உதவி.">93</td>
+<td data-text="92. எண்ணியகாரியம் கூடும்.நாட்செல்லும்">92</td>
+<td data-text="91. வழக்கு வெல்லும் பிணிதீரும்.">91</td>
+<td data-text="90. கீர்த்தி உண்டாகும்">90</td>
+<td data-text="89. பலநஷ்டம்.">89</td>
+<td data-text="88. கிரகங்கள் கெட்ட தாகவிருக்கின்றன">88</td>
+<td data-text="87. செளக்கியம் உண்டு. கவலை தீரும்.">87</td>
+<td data-text="86. பொருள் வரும் காரியங்கைகூடும்.">86</td>
+<td data-text=""></td>
+<td data-text=""></td>
+      </tr>	  
+	  <tr>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text="95.நினைத்த காரியம் முடியும். பிணிதீரும்">95</td>
+<td data-text="96.செய்காரியம் பலிதம் ">96</td>
+<td data-text="97.மனத்துக்கம். ">97</td>
+<td data-text="98.சென்றவர் வருவார் கைகூடும்.">98</td>
+<td data-text="99.கலகம் வந்து தீரும். ">99</td>
+<td data-text="100நினைத்த வேலை கைகூடும்.">100</td>
+<td data-text="101. நம்பவேண்டாம்.">101</td>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text=""></td>
+      </tr>	  
+	  <tr>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text="106. விருத்தியாகும். ">106</td>
+<td data-text="105. கிரகத்தால் துன்பம்.">105</td>
+<td data-text="104. போனது வராது.">104</td>
+<td data-text="103. பயமில்லை.">103</td>
+<td data-text="102. மனக்கவலைதீரும். ">102</td>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text=""></td>
+      </tr>	  
+	  <tr>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text="107. இஷ்டர் பகையாவர்.">107</td>
+<td data-text=""></td>
+<td data-text="108.பொருள்சேரும்.நினைத்த வேலை முடியும்.">108</td>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text=""></td>
+<td data-text=""></td>
+      </tr>
+    </table>
+	<br>
+    <div id="result"></div>
+    <script>
+      var table = document.querySelector('table');
+      var result = document.querySelector('#result');
+      table.addEventListener('click', function(event) {
+        var target = event.target;
+        if (target.tagName.toLowerCase() === 'td' && target.dataset.text) {
+          result.textContent = target.dataset.text;
+        }
+      });
+    </script>
+</body>
+</html>
